@@ -42,4 +42,19 @@ class ArithmeticUtilityTest {
   void subtract_resultZero() {
     assertEquals(0.0, util.subtract(7.5, 7.5), 1e-9);
   }
+
+  @Test
+  void add_positive(){
+
+  }
+
+  @Test
+  void add_withNegative(){
+
+  }
+
+  @Test
+  void add_resultZero(){
+
+  }
 }
