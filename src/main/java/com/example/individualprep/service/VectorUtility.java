@@ -29,7 +29,9 @@ public class VectorUtility {
 
   public double[] multiply(double[] v1, int x) {
     // TODO: Implement me properly!
-    if (v1 == null) return null;
+    if (v1 == null) {
+      throw new IllegalArgumentException("Input array 'v1' cannot be null.");
+    }
 
     double[] result = new double[v1.length];
     for (int i = 0; i < v1.length; i++) {
