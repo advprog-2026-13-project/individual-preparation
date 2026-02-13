@@ -22,6 +22,8 @@ class VectorUtilityTest {
         () -> util.add(new double[] {1.0}, new double[] {1.0, 2.0}));
   }
 
+
+
   @Test
   void norm_singleElement() {
     assertEquals(5.0, util.norm(new double[] {5.0}), 1e-9);
