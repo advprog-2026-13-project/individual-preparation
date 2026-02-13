@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - 'feat/**'
-      - 'cicd/**'
+      - 'cicd-setup'
   pull_request:
     branches: [ main ]
 
