@@ -74,7 +74,6 @@ class VectorUtilityTest {
   @Test
   void norm_multipleElements() {
     assertEquals(Math.sqrt(14.0), util.norm(new double[] {1.0, 2.0, 3.0}), 1e-9);
-
     assertEquals(Math.sqrt(23.0), util.norm(new double[] {-2.0, 3.0, 3.0, -1.0}), 1e-9);
   }
 
