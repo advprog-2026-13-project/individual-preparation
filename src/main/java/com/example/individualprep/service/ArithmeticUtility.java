@@ -20,8 +20,11 @@ public class ArithmeticUtility {
   }
 
   public double divide(double o1, double o2) {
-    // TODO: Implement me properly!
-    return 0.0;
+    if (o2 == 0.0) {
+      throw new IllegalArgumentException("Cannot divide by zero");
+    }
+    double result = o1 / o2;
+    return result;
   }
 
   // Assumes 0^0 == 1
