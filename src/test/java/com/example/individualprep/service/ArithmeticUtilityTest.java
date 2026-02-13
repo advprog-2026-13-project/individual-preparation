@@ -45,16 +45,16 @@ class ArithmeticUtilityTest {
 
   @Test
   void add_positive(){
-
+    assertEquals(14.1, util.add(5.0,9.1), 1e-9);
   }
 
   @Test
   void add_withNegative(){
-
+    assertEquals(10.9, util.add(14.0, -3.1), 1e-9);
   }
 
   @Test
   void add_resultZero(){
-
+    assertEquals(0.0, util.add(7.5,-7.5), 1e-9);
   }
 }
