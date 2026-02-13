@@ -1,5 +1,3 @@
 package com.example.individualprep.dto;
 
-public record ArithmeticResponse(double result) {
-}
-
+public record ArithmeticResponse(double result) {}
