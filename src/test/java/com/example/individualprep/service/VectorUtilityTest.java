@@ -36,11 +36,11 @@ class VectorUtilityTest {
   @Test
   void testDotProductNull() {
     assertThrows(
-            IllegalArgumentException.class,
-            () -> {
-              util.dotProduct(null, new double[] {1.0});
-            },
-            "Vector must not be null");
+        IllegalArgumentException.class,
+        () -> {
+          util.dotProduct(null, new double[] {1.0});
+        },
+        "Vector must not be null");
   }
 
   @Test
@@ -49,11 +49,11 @@ class VectorUtilityTest {
     double[] v2 = {1.0, 2.0, 3.0};
 
     Exception exception =
-            assertThrows(
-                    IllegalArgumentException.class,
-                    () -> {
-                      util.dotProduct(v1, v2);
-                    });
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> {
+              util.dotProduct(v1, v2);
+            });
 
     assertEquals("Vector length is not the same", exception.getMessage());
   }
