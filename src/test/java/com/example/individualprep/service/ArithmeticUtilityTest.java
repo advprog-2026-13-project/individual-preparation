@@ -26,4 +26,20 @@ class ArithmeticUtilityTest {
   void exponent_zeroBase_negativeExponent_throws() {
     assertThrows(IllegalArgumentException.class, () -> util.exponent(0.0, -1));
   }
+
+  @Test
+  void subtract_positive() {
+    assertEquals(5.0, util.subtract(10.0, 5.0), 1e-9);
+  }
+
+  @Test
+  void subtract_withNegative() {
+    // 10.0 - (-5.0) = 15.0
+    assertEquals(15.0, util.subtract(10.0, -5.0), 1e-9);
+  }
+
+  @Test
+  void subtract_resultZero() {
+    assertEquals(0.0, util.subtract(7.5, 7.5), 1e-9);
+  }
 }
