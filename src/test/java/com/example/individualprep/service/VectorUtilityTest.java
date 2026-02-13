@@ -21,4 +21,30 @@ class VectorUtilityTest {
         IllegalArgumentException.class,
         () -> util.add(new double[] {1.0}, new double[] {1.0, 2.0}));
   }
+
+  @Test
+  void norm_singleElement() {
+    assertEquals(5.0, util.norm(new double[] {5.0}), 1e-9);
+    assertEquals(5.0, util.norm(new double[] {-5.0}), 1e-9);
+  }
+
+  @Test
+  void norm_multipleElements() {
+    assertEquals(
+        Math.sqrt(14.0),
+        util.norm(new double[] {1.0, 2.0, 3.0}),
+        1e-9);
+
+    assertEquals(
+            Math.sqrt(23.0),
+            util.norm(new double[] {-2.0, 3.0, 3.0,-1.0}),
+            1e-9);
+  }
+
+  @Test
+  void norm_lengthZero_throws(){
+    assertThrows(
+            IllegalArgumentException.class,
+            () -> util.norm(new double[] {}));
+  }
 }

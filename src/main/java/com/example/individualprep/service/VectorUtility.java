@@ -38,7 +38,22 @@ public class VectorUtility {
   }
 
   public double norm(double[] v1) {
-    // TODO: Implement me properly!
-    return 0.0;
+    if (v1 == null) {
+      throw new IllegalArgumentException("Vectors must not be null");
+    }
+    if (v1.length == 0) {
+      throw new IllegalArgumentException("Vector must have at least one element");
+    }
+
+    // Reduce floating point error as much as possible for 1D case
+    if(v1.length == 1) {
+      return Math.abs(v1[0]);
+    }
+
+    double innerDotProduct = 0;
+    for(double v : v1) {
+      innerDotProduct += v * v;
+    }
+    return Math.sqrt(innerDotProduct);
   }
 }
