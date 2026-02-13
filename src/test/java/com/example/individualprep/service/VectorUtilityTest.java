@@ -87,7 +87,7 @@ class VectorUtilityTest {
     assertThrows(IllegalArgumentException.class, () -> util.norm(new double[] {}));
   }
 
-  //subtract test
+  // subtract test
   @Test
   void testSubtractNullInput() {
     assertThrows(IllegalArgumentException.class, () -> util.subtract(null, new double[] {1.0}));
