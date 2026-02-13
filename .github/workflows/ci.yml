@@ -28,7 +28,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Lint + Build & Test
-        run: ./gradlew spotlessCheck clean build
+        run: ./gradlew spotlessCheck clean test jacocoTestReport
 
       - name: SonarCloud Scan
         env:
