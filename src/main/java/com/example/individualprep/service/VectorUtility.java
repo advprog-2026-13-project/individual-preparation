@@ -58,12 +58,12 @@ public class VectorUtility {
     }
 
     // Reduce floating point error as much as possible for 1D case
-    if(v1.length == 1) {
+    if (v1.length == 1) {
       return Math.abs(v1[0]);
     }
 
     double innerDotProduct = 0;
-    for(double v : v1) {
+    for (double v : v1) {
       innerDotProduct += v * v;
     }
     return Math.sqrt(innerDotProduct);
