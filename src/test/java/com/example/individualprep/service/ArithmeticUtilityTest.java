@@ -57,4 +57,17 @@ class ArithmeticUtilityTest {
   void add_resultZero() {
     assertEquals(0.0, util.add(7.5, -7.5), 1e-9);
   }
+
+  // divide test
+  @Test
+  void testDivideSuccess() {
+    assertEquals(5.0, util.divide(10.0, 2.0), 1e-9);
+    assertEquals(-2.5, util.divide(5.0, -2.0), 1e-9);
+    assertEquals(0.0, util.divide(0.0, 5.0), 1e-9);
+  }
+
+  @Test
+  void testDivideByZero() {
+    assertThrows(IllegalArgumentException.class, () -> util.divide(10.0, 0.0));
+  }
 }
