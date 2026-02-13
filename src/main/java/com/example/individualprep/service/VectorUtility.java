@@ -29,7 +29,16 @@ public class VectorUtility {
 
   public double[] multiply(double[] v1, int x) {
     // TODO: Implement me properly!
-    return new double[] {0.0, 0.0, 0.0};
+    if (v1 == null) {
+      throw new IllegalArgumentException("Input array 'v1' cannot be null.");
+    }
+
+    double[] result = new double[v1.length];
+    for (int i = 0; i < v1.length; i++) {
+      result[i] = v1[i] * x;
+    }
+
+    return result;
   }
 
   public double dotProduct(double[] v1, double[] v2) {
@@ -58,12 +67,12 @@ public class VectorUtility {
     }
 
     // Reduce floating point error as much as possible for 1D case
-    if(v1.length == 1) {
+    if (v1.length == 1) {
       return Math.abs(v1[0]);
     }
 
     double innerDotProduct = 0;
-    for(double v : v1) {
+    for (double v : v1) {
       innerDotProduct += v * v;
     }
     return Math.sqrt(innerDotProduct);
